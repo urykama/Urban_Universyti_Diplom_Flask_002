@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Index Page
+{% endblock %}
+
+{% block body %}
+<h1>
+    Привет
+    {% if current_user.is_authenticated %}
+{{ current_user.username }}
+    {%endif%}
+</h1>
+
+«Блог на фреймворке Flask с возможностью регистрации и публикации статей»
+{% endblock %}
